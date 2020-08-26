@@ -20,6 +20,12 @@ app.post("/reg", function (req, res) {
   res.send("POST request to the homepage");
 });
 
+app.post("/points", function(req, res) {
+  const object = req.body;
+
+  console.log(object.scorer + ':' + object.points);
+});
+
 app.delete("/reg", function (req, res) {
   registration = {};
   res.send(registration);
